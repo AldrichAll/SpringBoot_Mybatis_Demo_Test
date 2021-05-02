@@ -1,0 +1,22 @@
+server:
+  port: 8111
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cmbworks?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
+
+mybatis:
+  mapper-locations: classpath:./mapper/*Mapper.xml
+  type-aliases-package: com.example.bys.entity
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  pageSizeZero: false #pageSize=0
+
