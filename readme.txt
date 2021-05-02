@@ -1,0 +1,1 @@
+利用springboot和mybatis框架的一个demo。可以实现增删改查的功能。
