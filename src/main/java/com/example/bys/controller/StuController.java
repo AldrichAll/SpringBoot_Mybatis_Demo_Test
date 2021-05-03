@@ -29,6 +29,11 @@ public class StuController {
         stuServiceImpl.deleteStu(stuId);
     }
 
+    @PostMapping(value = "/updateStu")
+    public void updateStu(@RequestBody StuEntity stuEntity){
+        System.out.println("In update controller stuId is "+stuEntity.getStuId()+" name is "+stuEntity.getName());
+        stuServiceImpl.updateStu(stuEntity);
+    }
 
 
 }

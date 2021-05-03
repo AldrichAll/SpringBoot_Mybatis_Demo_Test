@@ -4,6 +4,7 @@ import com.example.bys.entity.StuEntity;
 import com.example.bys.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -26,5 +27,10 @@ public class StuServiceImpl implements StuService {
     @Override
     public void deleteStu(int stuId){
         studentMapper.deleteStu(stuId);
+    }
+
+    @Override
+    public void updateStu(@RequestBody StuEntity stuEntity){
+        studentMapper.updateStu(stuEntity);
     }
 }
