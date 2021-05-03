@@ -29,7 +29,7 @@ public class UserController {
         return pageInfo;
     }
 
-    @RequestMapping("/selectOneUser")
+    @RequestMapping("/selectSingleUser")
     public UserEntity selectOneUser(int id){
         return userService.selectOneUser(id);
     }
